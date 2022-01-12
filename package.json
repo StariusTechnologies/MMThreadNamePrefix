@@ -1,11 +1,11 @@
 {
-  "name": "prevent-thread-creation",
+  "name": "thread-name-prefix",
   "version": "1.0.0",
-  "description": "A plugin for Discord ModMail by Dragory that prevents thread creation when configurable conditions are met",
-  "main": "./preventThreadCreation.js",
+  "description": "A plugin for Discord ModMail by Dragory that adds a prefix to thread names",
+  "main": "./threadNamePrefix.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StariusTechnologies/MMPreventThreadCreation.git"
+    "url": "git+https://github.com/StariusTechnologies/MMThreadNamePrefix.git"
   },
   "keywords": [
     "modmail",
@@ -14,6 +14,6 @@
   "author": "Lily Wonhalf <lilywonhalf@gmail.com>",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/StariusTechnologies/MMPreventThreadCreation/issues"
+    "url": "https://github.com/StariusTechnologies/MMThreadNamePrefix/issues"
   }
 }

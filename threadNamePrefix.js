@@ -25,13 +25,11 @@ module.exports = async function ({ config, hooks }) {
 
     const SETTING_NAMES = Object.freeze({
         PREFIX: 'prefix',
-        ADD_SPACE_ENABLED: 'addSpaceEnabled',
     });
 
     // Init with defaults
     const settings = new Map([
         [SETTING_NAMES.PREFIX, null],
-        [SETTING_NAMES.ADD_SPACE_ENABLED, false],
     ]);
 
     // Load config settings
@@ -56,7 +54,6 @@ module.exports = async function ({ config, hooks }) {
     }
 
     const prefix = settings.get(SETTING_NAMES.PREFIX);
-    const addSpace = settings.get(SETTING_NAMES.ADD_SPACE_ENABLED);
 
     if (!prefix || prefix.length < 1) {
         log(`Thread Name Prefix plugin disengaged, no configuration provided.`);
@@ -64,7 +61,7 @@ module.exports = async function ({ config, hooks }) {
     }
 
     const beforeThread = ({ opts }) => {
-        opts.channelName = `${prefix}${addSpace ? ' ' : ''}${opts.channelName}`;
+        opts.channelName = `${prefix}${opts.channelName}`;
     };
 
     hooks.beforeNewThread(beforeThread);
